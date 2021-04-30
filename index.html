@@ -18,19 +18,19 @@
 </body>
 
 <script>
-var textElement = document.getElementById("note")
+    var textElement = document.getElementById("note")
 
 function saveNote() {
-    if(textElement.value == ""){
-        return alert('There is nothing to save!')
-    }
+        if(textElement.value == ""){
+        return alert("text is empty!")
+        }
     const id = getNoteId()
     let noteObject = getExistingNotes()
     if(!noteObject){
         noteObject = {}
     }
     noteObject[id] = textElement.value
-    localStorage.setItem('notes', JSON.stringify(noteObject))
-    alert('Note Saved!')
-}
+    localStorage.setItem("notes", JSON.stringify(noteObject))
+    alert("Note Saved!")
+ }
 </script>

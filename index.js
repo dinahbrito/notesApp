@@ -1,4 +1,4 @@
-function getNoteID() {
+function getNoteId() {
     let noteObject = getExistingNotes()
     if(!noteObject){
         return 1
@@ -10,7 +10,7 @@ function getNoteID() {
 }
 
 function getExistingNotes() {
-    let notes = localStorage.getItem('notes')
+    let notes = localStorage.getItem("notes")
     if(!notes){
         return null
     }
